@@ -1,6 +1,14 @@
 const inquirer = require('inquirer');
 
-console.log(inquirer);
+inquirer
+  .prompt([
+    {
+      type: 'input',
+      name: 'name',
+      message: 'What is your name?'
+    }
+  ])
+  .then(answers => console.log(answers));
 // const fs = require('fs');
 // const generatPage = require('./src/page-template');
 
@@ -16,10 +24,3 @@ console.log(inquirer);
 //   for (let i = 0; i < profileDataArr.length; i += 1) {
 //     console.log(profileDataArr[i]);
 //   }
-
-//   console.log('================');
-
-//   profileDataArr.forEach(profileItem => console.log(profileItem));
-// };
-
-// printProfileData(profileDataArgs);
